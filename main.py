@@ -9,7 +9,10 @@ def encoder(pwd):
 
 def decoder(encoded_pwd):
     # Takes an encoded password of ints, and returns the original password
-    return None
+    decode = []
+    for digit in encoded_pwd:
+        decode.append(str(int(digit) - 3))
+    return "".join(decode)
 
 
 if __name__ == "__main__":
@@ -27,7 +30,7 @@ if __name__ == "__main__":
             encoded_pwd = encoder(pwd)
             print("Your password has been encoded and stored!")
         elif choice == "2":
-            decoded_pwd = decoder(pwd)
+            decoded_pwd = decoder(encoded_pwd)
             print(
                 f"The encoded password is {encoded_pwd}, and the original password is {decoded_pwd}."
             )
