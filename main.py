@@ -1,3 +1,6 @@
+# Finn Lancaster, 2023-10-25
+
+
 def encoder(pwd):
     # Takes a password of ints, and returns the password with all digits
     # incremented by 3
